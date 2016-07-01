@@ -1,7 +1,6 @@
 package com.jkxy.model;
 
 import java.util.Date;
-
 /**
  * Userdetail entity. @author MyEclipse Persistence Tools
  */
@@ -12,7 +11,7 @@ public class Userdetail implements java.io.Serializable {
 
 	private Integer userid;
 	private User user;
-	private Boolean xb;
+	private Byte xb;
 	private String truename;
 	private Date csrq;
 	private String phone;
@@ -31,7 +30,7 @@ public class Userdetail implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Userdetail(User user, Boolean xb, String truename, Date csrq,
+	public Userdetail(User user, Byte xb, String truename, Date csrq,
 			String phone, String email, String address) {
 		this.user = user;
 		this.xb = xb;
@@ -60,11 +59,13 @@ public class Userdetail implements java.io.Serializable {
 		this.user = user;
 	}
 
-	public Boolean getXb() {
-		return this.xb;
+	
+
+	public Byte getXb() {
+		return xb;
 	}
 
-	public void setXb(Boolean xb) {
+	public void setXb(Byte xb) {
 		this.xb = xb;
 	}
 

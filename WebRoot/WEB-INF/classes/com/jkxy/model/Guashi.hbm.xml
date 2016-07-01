@@ -10,7 +10,7 @@
             <column name="id" />
             <generator class="identity" />
         </id>
-        <many-to-one name="user" class="com.jkxy.model.User" fetch="select">
+        <many-to-one name="user" class="com.jkxy.model.User" fetch="select" unique="true">
             <column name="userid" />
         </many-to-one>
     </class>

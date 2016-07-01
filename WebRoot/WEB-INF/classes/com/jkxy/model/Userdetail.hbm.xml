@@ -8,13 +8,13 @@
     <class name="com.jkxy.model.Userdetail" table="userdetail" catalog="jkxyshsflower">
         <id name="userid" type="java.lang.Integer">
             <column name="userid" />
-         <!--    <generator class="identity" /> -->
-         <generator class="foreign" >
-         	<param name="property">user</param>
-         </generator>
+<!--             <generator class="identity" /> -->
+            <generator class="foreign" >
+            <param name="property">user</param>
+            </generator>
         </id>
         <one-to-one name="user" class="com.jkxy.model.User" constrained="true"></one-to-one>
-        <property name="xb" type="java.lang.Boolean">
+        <property name="xb" type="java.lang.Byte">
             <column name="xb" />
         </property>
         <property name="truename" type="java.lang.String">

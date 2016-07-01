@@ -2,7 +2,7 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<package name="default" extends="struts-default">
-	<!-- 	<action name="browseCatalog" class="flowerAction" method="browseCatalog">
+		<action name="browseCatalog" class="flowerAction" method="browseCatalog">
 			<result name="success">/menu.jsp</result>
 		</action>
 		<action name="browseNewFlower" class="flowerAction" method="browseNewFlower">
@@ -10,12 +10,12 @@
 		</action>
 		<action name="browseFlowerPaging" class="flowerAction" method="browseFlowerPaging">
 			<result name="success">/browseFlowerPaging.jsp</result>
-		</action> -->
+		</action>
 		<action name="addUser" class="userAction" method="addUser">
 			<result name="success">/register_success.jsp</result>
 			<result name="error">/register.jsp</result>
 		</action>
-		<!-- <action name="checkUser" class="userAction" method="checkUser">
+		<action name="checkUser" class="userAction" method="checkUser">
 			<result name="success">/login_success.jsp</result>
 			<result name="error">/login_failure.jsp</result>
 		</action>
@@ -29,6 +29,31 @@
 		<action name="updateUserDetail" class="userAction" method="updateUserDetail">
 			<result name="success">/updateUserDetail_success.jsp</result>
 			<result name="error">/modifyDetail.jsp</result>
-		</action> -->
+		</action>
+		<action name="shoppingAction" class="shoppingAction" method="addToCart">
+			<result name="success">/addToCart_success.jsp</result>
+		</action>
+		<action name="updateCart" class="shoppingAction" method="updateCart">
+			<result name="success">/showCart.jsp</result>
+		</action>
+		<action name="checkOut" class="orderAction" method="checkOut">
+			<result name="success">/checkout_success.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="addOrUpdateFlower" class="flowerAction" method="addOrUpdateFlower">
+			<result name="success">/addNewFlower_success.jsp</result>
+			<result name="error">/addNewFlower.jsp</result>
+			<result name="input">/addNewFlower.jsp</result>
+		</action>
+		<action name="managerFlower" class="flowerAction" method="browseAllFlowerPaging">
+			<result name="success">/browseAllFlowerPaging.jsp</result>
+		</action>
+		<action name="displayOneFlower" class="flowerAction" method="displayOneFlower">
+			<result name="success">/displayOneFlower.jsp</result>
+		</action>
+		<action name="deleteOneFlower" class="flowerAction" method="deleteOneFlower">
+			<result name="success">/deleteOneFlower_success.jsp</result>
+
+		</action>
 	</package>
 </struts>    

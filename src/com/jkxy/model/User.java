@@ -15,9 +15,9 @@ public class User implements java.io.Serializable {
 	private String username;
 	private String password;
 	private String role;
-	private Set guashis = new HashSet(0);
-	private Set orderses = new HashSet(0);
+	private Guashi guashi;
 	private Userdetail userdetail;
+	private Set orderses = new HashSet(0);
 
 	// Constructors
 
@@ -26,14 +26,14 @@ public class User implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public User(String username, String password, String role, Set guashis,
-			Set orderses, Userdetail userdetail) {
+	public User(String username, String password, String role, Guashi guashi,
+			Userdetail userdetail, Set orderses) {
 		this.username = username;
 		this.password = password;
 		this.role = role;
-		this.guashis = guashis;
-		this.orderses = orderses;
+		this.guashi = guashi;
 		this.userdetail = userdetail;
+		this.orderses = orderses;
 	}
 
 	// Property accessors
@@ -70,20 +70,14 @@ public class User implements java.io.Serializable {
 		this.role = role;
 	}
 
-	public Set getGuashis() {
-		return this.guashis;
+	
+
+	public Guashi getGuashi() {
+		return guashi;
 	}
 
-	public void setGuashis(Set guashis) {
-		this.guashis = guashis;
-	}
-
-	public Set getOrderses() {
-		return this.orderses;
-	}
-
-	public void setOrderses(Set orderses) {
-		this.orderses = orderses;
+	public void setGuashi(Guashi guashi) {
+		this.guashi = guashi;
 	}
 
 	public Userdetail getUserdetail() {
@@ -92,6 +86,14 @@ public class User implements java.io.Serializable {
 
 	public void setUserdetail(Userdetail userdetail) {
 		this.userdetail = userdetail;
+	}
+
+	public Set getOrderses() {
+		return this.orderses;
+	}
+
+	public void setOrderses(Set orderses) {
+		this.orderses = orderses;
 	}
 
 }

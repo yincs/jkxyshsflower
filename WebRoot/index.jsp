@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -23,7 +24,16 @@
 </head>
 
 <body>
-	This is my JSP page.
-	<br>
+	<jsp:include page="head.jsp"></jsp:include>
+	<div class="content">
+		<div class="left">	
+		<s:action name="browseCatalog" executeResult="true"></s:action>	 
+       	</div>
+		<div class="right">
+			<s:action name="browseNewFlower" executeResult="true"></s:action>
+	
+			</div>
+	</div>
+	<jsp:include page="foot.jsp"></jsp:include>
 </body>
 </html>

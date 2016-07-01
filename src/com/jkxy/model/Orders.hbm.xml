@@ -16,7 +16,7 @@
         <property name="orderdate" type="java.sql.Timestamp">
             <column name="orderdate" length="19" />
         </property>
-        <set name="orderitems" inverse="true">
+        <set name="orderitems" inverse="true" cascade="all">
             <key>
                 <column name="orderid" />
             </key>
